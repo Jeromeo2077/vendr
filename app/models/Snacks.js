@@ -9,5 +9,10 @@ export class Snack {
     this.imgUrl = data.imgUrl
   }
 
-  <button class="btn btn-outline-dark fs-1">Jerky</button>
+  get HTMLSnackButtonTemplate() {
+    return /*HTML*/'
+      < button class="btn btn-outline-dark fs-1" > Jerky</button > '
+  }
+
+
 }
