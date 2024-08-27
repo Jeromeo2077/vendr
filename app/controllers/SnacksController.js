@@ -3,6 +3,8 @@ import { AppState } from "../AppState.js";
 export class SnacksController {
   constructor() {
     console.log('SnacksController is loading');
+
+    this.drawSnacks()
   }
 
   drawSnacks() {
