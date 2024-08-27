@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { snacksService } from "../services/SnacksService.js";
 
 export class SnacksController {
   constructor() {
@@ -15,5 +16,9 @@ export class SnacksController {
     const snackElm = document.getElementById('snackButtons')
     snackElm.innerHTML = snackHTML
 
+  }
+
+  addQuarter() {
+    snacksService.addQuarter()
   }
 }
