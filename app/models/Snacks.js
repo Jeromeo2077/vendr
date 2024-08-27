@@ -11,7 +11,7 @@ export class Snack {
 
   get HTMLSnackButtonTemplate() {
     return `
-      <button class="btn btn-success m-3 snackButton"><p>${this.name}</p><p>${this.price}</p></button>
+      <button class="btn btn-success m-3 snackButton"><p>${this.name}</p><p>${this.price.toFixed(2)}</p></button>
         `
   }
 
