@@ -6,6 +6,8 @@ export class SnacksController {
     console.log('SnacksController is loading');
 
     this.drawSnacks()
+    this.drawMoney()
+    AppState.on('money', this.drawMoney)
   }
 
   drawSnacks() {
@@ -15,7 +17,14 @@ export class SnacksController {
     snacks.forEach(snack => snackHTML += snack.HTMLSnackButtonTemplate)
     const snackElm = document.getElementById('snackButtons')
     snackElm.innerHTML = snackHTML
+  }
 
+
+  drawMoney() {
+    const money = AppState.money
+
+    const moneyElm = document.getElementById('money')
+    moneyElm.innerText = money.toString()
   }
 
   addQuarter() {
